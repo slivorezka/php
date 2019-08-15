@@ -46,4 +46,25 @@
   * Асинхронность
 ***
 ## HTTP
+
 ### Уровни стека TCP / IP (Сетевые модели OSI)
+
+1. Прикладной: HTTP, FTP, POP3, SMTP
+2. Транспортный:  TCP, UDP
+3. Сетевой: IP
+4. Канальный: Проводной (Ethernet) , Беспроводной (Wireless Ethernet (Wi-Fi, 3G))
+
+### Порты
+
+* 80 — порт WEB-сервера
+* 443 —  порт WEB-сервера для HTTPS
+* 21 — порт FTP сервера (File Transfer Protocol)
+* 25 — порт почтового SMTP сервера. (Simple Mail Transfer Protocol)
+* 110 — порт POP3 сервера (Post Office Protocol 3)
+
+### Общая структура HTTP запросов и ответов
+
+* Cтрока запроса (Request Line)
+* Заголовки запроса (Headers)
+* Пустая строка (Spase)
+* Тело сообщения (Body)
