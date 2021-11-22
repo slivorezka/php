@@ -195,7 +195,7 @@ Doctrine и Eloquent — это ORM по-прежнему одна из самы
 
 ***
 
-## WSDL — Web Services Description Languag
+## WSDL — Web Services Description Language
 WSDL — это язык описания веб-сервисов и доступа к ним, основанный на языке XML.
 
 ***
