@@ -126,8 +126,8 @@ PHP-FPM используется в основном в связке с Nginx.
 ### PHP-FIG — PHP Framework Interop Group
 PHP-FIG — организованная группа разработчиков, цель которой находить способы совместной работы нескольких фрейморков.
 
-* PSR-0 — Autoloading Standart (deprecated)
-* PSR-1 — Basic Coding Standart
+* PSR-0 — Autoloading Standard (deprecated)
+* PSR-1 — Basic Coding Standard
 * PSR-2 — Coding Style Guid (deprecated)
 * PCR-3 — Logger Interface
 * PCR-4 — Improved Autoloading (предоставляет улучшенные методы автозагрузки)
