@@ -1,50 +1,52 @@
 ## Разница между версиями PHP
 * PHP 5.3
-  * По умолчанию `register_globals` выключены
-  * Пространства имен Namespaces
-  * Позднее статическое связывание (Late Static Binding)
-  * Магические методы не могут быть статичными и обязаны быть публичными `__get()`, `__set()`, `__isset()`, `__unset()`, `__call()`
-  * Константа `__DIR__`
-  * Внутренние имена `__FUNCTION__`, `__METHOD__`, `__CLASS__`
-  * Динамический доступ к статическим данным, например `$foo::bar(), $foo::$bar`
-  * Сокращенный условный оператор ?:, наример `$a ?: $ b === $a ? $a : $b`
-  * NowDoc
-  * Разные установки для разных директорий `INI System`
+  * By default `register_globals` is disabled
+  * There is `Namespaces`
+  * `Late Static Binding`
+  * Magic methods have to be `public` and can't be `static` `__get()`, `__set()`, `__isset()`, `__unset()`, `__call()`
+  * Constant `__DIR__`
+  * Integral special names `__FUNCTION__`, `__METHOD__`, `__CLASS__`
+  * Dynamic access to the static objects like `$foo::bar(), $foo::$bar`
+  * Comparison operator `?:`, for example `$a ?: $ b === $a ? $a : $b`
+  * `NowDoc`
+  * Different settings for different directories `INI System`
 * PHP 5.4
-  * Запись массива, без слова `array`, например `['foo', 'bar']`
-  * Быстрое получение элемента массива, например `$foo = foo()[0];`
-  * Примеси (trait), например `trait Class {}`
-  * Доступ к элементу объекта при его создании, например`(new Foo)->method()`
+  * Array without `array` like `['foo', 'bar']`
+  * Fast access to the array element like `$foo = foo()[0];`
+  * `Trait`, like `trait Class {}`
+  * Access member of newly created object like `(new Foo)->method()`
 * PHP 5.5
-  * Можно применять к результатам функций и выражений `empty()`
-  * В конструкции `try / catch` добавили `finally`
-  * Для получения имени класса в пространствах можно использовать `FooClass::class`
-  * Генераторы `yield`  
+  * Possibility to use `empty()` to functions and methods.
+  * A new element for `try / catch` like `finally`
+  * Possibility to use `FooClass::class` for getting `Namespaces`
+  * Generators `yield`
 * PHP 5.6
-  * Скалярные выражения в константах / свойствах / аргументах функции const, например `const PLUS = 1 + 2;`
+  * Possibility to use `const PLUS = 1 + 2;`
   * Импорт функций из пространства имён
+  * Import `functions` from `Namespaces`
 * PHP 7
-  * Одновременная проверка `isset` и получение значения, например `$a ?? ''`
-  * Одновременное выполнение трех сравнений: больше, равно или меньше, например `$a <=> $b`
-  * Группировка пространства имен при помощи `use`, например `use foo\bar\{A, B, C as c};`
-  * Новые типы для аргументов методов (функций) `int, float, bool`
-  * Новые типы для указания возвращаемых типов для методов (функций) `int, float, bool, array`
-  * Анонимные классы, например `$foo = new Foo{};`
-  *  Возврат `return` выражений в генераторах `yield ... return 99;`  
+  * Short `isset` for checking variable like `$a ?? ''`
+  * Combined comparison (Spaceship) operator `$a <=> $b`
+  * Grouping of `Namespaces` like `use foo\bar\{A, B, C as c};`
+  * New type declarations for method and functions like `int, float, bool, array`
+  * Anonymous classes like  `$foo = new Foo{};`
+  * Return `return` in generators like `yield ... return 99;`  
 * PHP 7.1
-  * Новые тип для указания возвращаемых типов для методов (функций) `void`  
+  * New type declaration for method and functions like `void`  
 * PHP 7.2
-  * Добавлена возможность перегружать абстрактные методы
-  * В ядро PHP добавлена новая библиотека шифрование Libsodium  
+  * Possibility to reload abstract methods
+  * Everything `Libsodium` lib in the Core
 * PHP 7.3
-  * Добавлена поддержка конечных запятых в вызовах методов (функций), например `function($arg1, $arg2, $arg3,)`
-  * Добавлены новые функции `array_key_first()` и `array_key_last()`  
+  * Possibility to use comma in the method and functions like `function($arg1, $arg2, $arg3,)`
+  * New functions `array_key_first()` и `array_key_last()`  
 * PHP 7.4
- * Добавлены типизированные свойства классов, например `class Foo { public string $foo; public Bar $bar;}` 
+  * Typed properties of classes like `class Foo { public string $foo; public Bar $bar;}` 
 * PHP 8
   * JIT
-  * Интерфейс внешних функций Foreign Function Interface). Это позволит подключать PHP к нативным библиотекам, написанным на С или С++, без необходимости создавать расширение
-  * Асинхронность
+  * Foreign Function Interface (FFI).
+  * Union types like `public function foo(Foo|Bar $input): int|float;`
+  * Nullable unions `public function bar(?Bar $bar): ?void;`
+  * `JIT` is a technique that will compile parts of the code at runtime, so that the compiled version can be used instead. 
   
 ***
 
