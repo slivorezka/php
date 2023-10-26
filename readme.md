@@ -46,8 +46,24 @@
   * Foreign Function Interface (FFI).
   * Union types like `public function foo(Foo|Bar $input): int|float;`
   * Nullable unions `public function bar(?Bar $bar): ?void;`
-  * `JIT` is a technique that will compile parts of the code at runtime, so that the compiled version can be used instead. 
-  
+  * `JIT` is a technique that will compile parts of the code at runtime, so that the compiled version can be used instead
+* PHP 8.1  
+  * `Enums`
+  * 
+  * `Fibers` — aka `green threads` — are a low level mechanism to manage parallelism
+* PHP 8.2
+  * Readonly classes
+  * A new class called `Randomizer`, which accepts a randomizer engine
+  * `null`, `true`, and `false` as standalone types like `function alwaysFalse(): false`
+  * Disjunctive Normal Form Types like `function generateSlug((HasTitle&HasId)|null $post)`
+  * Constants in `traits`
+  * Fetch properties of enums in const expressions `const C = [self::B->value => self::B];`
+  * Deprecate `${}` string interpolation
+* PHP 8.3
+  * Typed class constants like `public const string BAR = 'baz';` 
+  * Negative indices in arrays like if `$array[-4] = 'a'; $array[] = 'b';` it will `[-4, -3]` not `[-4, 0]`
+  * Anonymous readonly classes
+  * Dynamic class constant fetch like `Foo::{$name};`
 ***
 
 ## CGI, FastCGI и FPM
